@@ -192,13 +192,13 @@ dat &lt;- read.csv(&quot;traits-environment-pca.csv&quot;, header=TRUE, na.strin
 summary(dat)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiIHN0b21hdGFsX2RlbnNpdHkgICBQcmluMV90ZW1wICAgICAgICBQcmluMl9kcnkgICAgICAgICAgUHJpbjNfbWFwICAgICAgICAgICAgIHllYXIgICAgIFxuIE1pbi4gICA6MjIuMjIgICAgTWluLiAgIDotMi4wMDU3ICAgTWluLiAgIDotMS42NTgyMiAgIE1pbi4gICA6LTEuNTk3MDkgICBNaW4uICAgOjIwMTMgIFxuIDFzdCBRdS46MzcuMDQgICAgMXN0IFF1LjotMC45OTMwICAgMXN0IFF1LjotMC41NzY4MiAgIDFzdCBRdS46LTAuODQ0MjQgICAxc3QgUXUuOjIwMTMgIFxuIE1lZGlhbiA6NDQuNDQgICAgTWVkaWFuIDogMC4zNTk4ICAgTWVkaWFuIDogMC4wMDI3MyAgIE1lZGlhbiA6LTAuMDIzMDMgICBNZWRpYW4gOjIwMTQgIFxuIE1lYW4gICA6NDUuMTkgICAgTWVhbiAgIDotMC4xMjExICAgTWVhbiAgIDogMC4xMzQ2MSAgIE1lYW4gICA6LTAuMDI0NjUgICBNZWFuICAgOjIwMTQgIFxuIDNyZCBRdS46NTEuODUgICAgM3JkIFF1LjogMC43MjE3ICAgM3JkIFF1LjogMS4zNDEyMCAgIDNyZCBRdS46IDAuNTYxMDQgICAzcmQgUXUuOjIwMTQgIFxuIE1heC4gICA6NzkuNjMgICAgTWF4LiAgIDogMS4yMjAyICAgTWF4LiAgIDogMS41MTAzNSAgIE1heC4gICA6IDIuMDU2MjkgICBNYXguICAgOjIwMTQgIFxuIE5BJ3MgICA6MTEzMCAgICAgTkEncyAgIDoyICAgICAgICAgTkEncyAgIDoyICAgICAgICAgIE5BJ3MgICA6MiAgICAgICAgICAgICAgICAgICAgICAgIFxuIn0= -->
-<pre><code> stomatal_density   Prin1_temp        Prin2_dry          Prin3_map             year     
- Min.   :22.22    Min.   :-2.0057   Min.   :-1.65822   Min.   :-1.59709   Min.   :2013  
- 1st Qu.:37.04    1st Qu.:-0.9930   1st Qu.:-0.57682   1st Qu.:-0.84424   1st Qu.:2013  
- Median :44.44    Median : 0.3598   Median : 0.00273   Median :-0.02303   Median :2014  
- Mean   :45.19    Mean   :-0.1211   Mean   : 0.13461   Mean   :-0.02465   Mean   :2014  
- 3rd Qu.:51.85    3rd Qu.: 0.7217   3rd Qu.: 1.34120   3rd Qu.: 0.56104   3rd Qu.:2014  
- Max.   :79.63    Max.   : 1.2202   Max.   : 1.51035   Max.   : 2.05629   Max.   :2014  
+<pre><code> stomatal_density   Prin1_temp        Prin2_dry          Prin3_map             year
+ Min.   :22.22    Min.   :-2.0057   Min.   :-1.65822   Min.   :-1.59709   Min.   :2013
+ 1st Qu.:37.04    1st Qu.:-0.9930   1st Qu.:-0.57682   1st Qu.:-0.84424   1st Qu.:2013
+ Median :44.44    Median : 0.3598   Median : 0.00273   Median :-0.02303   Median :2014
+ Mean   :45.19    Mean   :-0.1211   Mean   : 0.13461   Mean   :-0.02465   Mean   :2014
+ 3rd Qu.:51.85    3rd Qu.: 0.7217   3rd Qu.: 1.34120   3rd Qu.: 0.56104   3rd Qu.:2014
+ Max.   :79.63    Max.   : 1.2202   Max.   : 1.51035   Max.   : 2.05629   Max.   :2014
  NA's   :1130     NA's   :2         NA's   :2          NA's   :2                        </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
@@ -212,12 +212,12 @@ dat$year &lt;- factor(dat$year)
 summary(dat)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiIHN0b21hdGFsX2RlbnNpdHkgICBQcmluMV90ZW1wICAgICAgICAgUHJpbjJfZHJ5ICAgICAgICAgIFByaW4zX21hcCAgICAgICAgICB5ZWFyICAgIFxuIE1pbi4gICA6MjIuMjIgICAgTWluLiAgIDotMi4wMDU3MyAgIE1pbi4gICA6LTEuNjU4MjIgICBNaW4uICAgOi0xLjU5NzA5ICAgMjAxMzoyMzMgIFxuIDFzdCBRdS46MzcuMDQgICAgMXN0IFF1LjotMC43NTc3OSAgIDFzdCBRdS46LTAuNTk5OTYgICAxc3QgUXUuOi0wLjM2MjM1ICAgMjAxNDoyNzcgIFxuIE1lZGlhbiA6NDQuNDQgICAgTWVkaWFuIDogMC41MDIxOSAgIE1lZGlhbiA6LTAuMDg1NzQgICBNZWRpYW4gOi0wLjAyMzAzICAgICAgICAgICAgIFxuIE1lYW4gICA6NDUuMTkgICAgTWVhbiAgIDogMC4wMzY4OCAgIE1lYW4gICA6IDAuMDQwMTIgICBNZWFuICAgOiAwLjA0MzA5ICAgICAgICAgICAgIFxuIDNyZCBRdS46NTEuODUgICAgM3JkIFF1LjogMC43MzIxNSAgIDNyZCBRdS46IDAuODQyODQgICAzcmQgUXUuOiAwLjU2MTA0ICAgICAgICAgICAgIFxuIE1heC4gICA6NzkuNjMgICAgTWF4LiAgIDogMS4yMjAyNCAgIE1heC4gICA6IDEuNTEwMzUgICBNYXguICAgOiAyLjA1NjI5ICAgICAgICAgICAgIFxuIn0= -->
-<pre><code> stomatal_density   Prin1_temp         Prin2_dry          Prin3_map          year    
- Min.   :22.22    Min.   :-2.00573   Min.   :-1.65822   Min.   :-1.59709   2013:233  
- 1st Qu.:37.04    1st Qu.:-0.75779   1st Qu.:-0.59996   1st Qu.:-0.36235   2014:277  
- Median :44.44    Median : 0.50219   Median :-0.08574   Median :-0.02303             
- Mean   :45.19    Mean   : 0.03688   Mean   : 0.04012   Mean   : 0.04309             
- 3rd Qu.:51.85    3rd Qu.: 0.73215   3rd Qu.: 0.84284   3rd Qu.: 0.56104             
+<pre><code> stomatal_density   Prin1_temp         Prin2_dry          Prin3_map          year
+ Min.   :22.22    Min.   :-2.00573   Min.   :-1.65822   Min.   :-1.59709   2013:233
+ 1st Qu.:37.04    1st Qu.:-0.75779   1st Qu.:-0.59996   1st Qu.:-0.36235   2014:277
+ Median :44.44    Median : 0.50219   Median :-0.08574   Median :-0.02303
+ Mean   :45.19    Mean   : 0.03688   Mean   : 0.04012   Mean   : 0.04309
+ 3rd Qu.:51.85    3rd Qu.: 0.73215   3rd Qu.: 0.84284   3rd Qu.: 0.56104
  Max.   :79.63    Max.   : 1.22024   Max.   : 1.51035   Max.   : 2.05629             </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
@@ -249,7 +249,7 @@ starting worker pid=28694 on localhost:11903 at 20:05:35.735
 starting worker pid=28702 on localhost:11903 at 20:05:35.909
 starting worker pid=28710 on localhost:11903 at 20:05:36.082
 
-Manually removed progress report    
+Manually removed progress report
 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3B0X29sZCA8LSBvcHRpb25zKHdpZHRoPTE4MClcbnN1bW1hcnkoZGF0X2xtLCBkaWdpdHM9MylcbmBgYCJ9 -->
@@ -262,7 +262,7 @@ Model Info:
 
  function:     stan_lmer
  family:       gaussian [identity]
- formula:      stomatal_density ~ Prin1_temp + Prin2_dry + Prin3_map + (1 | 
+ formula:      stomatal_density ~ Prin1_temp + Prin2_dry + Prin3_map + (1 |
        year)
  algorithm:    sampling
  priors:       see help('prior_summary')
@@ -271,7 +271,7 @@ Model Info:
  groups:       year (2)
 
 Estimates:
-                                      mean      sd        2.5%      25%       50%       75%       97.5%  
+                                      mean      sd        2.5%      25%       50%       75%       97.5%
 (Intercept)                            45.068     8.994    26.685    42.254    45.229    48.192    62.266
 Prin1_temp                              2.422     0.420     1.597     2.137     2.423     2.712     3.216
 Prin2_dry                              -2.125     0.428    -2.980    -2.410    -2.117    -1.851    -1.277
@@ -285,16 +285,16 @@ log-posterior                       -1851.093     2.270 -1856.443 -1852.358 -185
 
 Diagnostics:
                                     mcse   Rhat   n_eff
-(Intercept)                          0.450  1.009  400 
-Prin1_temp                           0.007  0.999 4000 
-Prin2_dry                            0.007  1.001 4000 
-Prin3_map                            0.006  1.001 4000 
-b[(Intercept) year:2013]             0.450  1.008  400 
-b[(Intercept) year:2014]             0.450  1.009  400 
-sigma                                0.005  1.000 4000 
-Sigma[year:(Intercept),(Intercept)] 10.479  1.002  911 
-mean_PPD                             0.009  1.001 4000 
-log-posterior                        0.059  1.002 1489 
+(Intercept)                          0.450  1.009  400
+Prin1_temp                           0.007  0.999 4000
+Prin2_dry                            0.007  1.001 4000
+Prin3_map                            0.006  1.001 4000
+b[(Intercept) year:2013]             0.450  1.008  400
+b[(Intercept) year:2014]             0.450  1.009  400
+sigma                                0.005  1.000 4000
+Sigma[year:(Intercept),(Intercept)] 10.479  1.002  911
+mean_PPD                             0.009  1.001 4000
+log-posterior                        0.059  1.002 1489
 
 For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</code></pre>
 <!-- rnb-output-end -->
@@ -303,7 +303,7 @@ For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>This analysis detects the same relationships Carlson et al. reported, but it also detects a relationship with axis 2 that they did not detect. The difference arises because the Carlson et al. model treated stomatal density as one component of a vector including other traits. Presumably the relationship between stomatal density and axis 2 is detected here because stomatal density is negatively associated with leaf area. The difference in results suggests that the association between axis 2 and stomatal density detected here is not causal.</p>
+<p>This analysis detects the same relationships Carlson et al. reported, but it also detects a relationship with axis 3 that they did not detect. The difference arises because the Carlson et al. model treated stomatal density as one component of a vector including other traits. Presumably the relationship between stomatal density and axis 3 is detected here because stomatal density is negatively associated with leaf area. The difference in results suggests that the association between axis 3 and stomatal density detected here is not causal.</p>
 <!-- rnb-text-end -->
 
 <div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBub3RlYm9vayBleHBsb3JlcyBzb21lIG9mIHRoZSBkYXRhIGFuYWx5emVkIGluIENhcmxzb24gZXQgYWwuLCA8ZW0+QW5uYWxzIG9mIEJvdGFueTwvZW0+IDExNzoxOTUtMjA3OyAyMDE2IChkb2k6IFtodHRwczovL2R4LmRvaS5vcmcvMTAuMTA5My9hb2IvbWN2MTQ2XSkuIFNwZWNpZmljYWxseSwgdGhlIGZvY3VzIGhlcmUgaXMgb24gdHJhaXQtZW52aXJvbm1lbnQgcmVsYXRpb25zaGlwcyB1c2luZyBkYXRhIG1lYXN1cmVkIG9uIHNlZWRsaW5ncyBpbiB0aGUgS2lyc3RlbmJvc2NoIEJvdGFuaWNhbCBHYXJkZW4gaW4gMjAxMyBhbmQgMjAxNC4gVGhlIGRhdGEgZmlsZSBoZXJlIGlzIHRoZSBzYW1lIG9uZSAob3Igc2hvdWxkIGJlIHRoZSBzYW1lIG9uZSkgYXZhaWxhYmxlIGF0IFtodHRwczovL2dpdGh1Yi5jb20va2hvbHNpbmdlci9Qcm90ZWEtcmVwZW5zLXBoeXNpb2xvZ3kvcmVsZWFzZXMvdGFnL3YxLjBdLgpgYGB7cn0KIyMgY2xlYXIgbWVtb3J5IG9mIGFueSBleGlzdGluZyBhbmFseXNlcyB0byBhdm9pZCBjb25mbGljdHMKIyMKcm0obGlzdD1scygpKQpkYXQgPC0gcmVhZC5jc3YoInRyYWl0cy1lbnZpcm9ubWVudC1wY2EuY3N2IiwgaGVhZGVyPVRSVUUsIG5hLnN0cmluZ3M9YygiTkEiLCIuIikpCmBgYApUaGlzIGFuYWx5c2lzIHdpbGwgdXNlIG9ubHkgYSBzdWJzZXQgb2YgdGhlIGRhdGEsIHNvIHRoZSBmaXJzdCBzdGVwIGlzIHRvIHJlZHVjZSB0aGUgZGF0YSBmcmFtZSB0byBpbmNsdWRlIG9ubHkgdGhlIHJlbGV2YW50IGNvbHVtbnMuCmBgYHtyfQpkYXQgPC0gZGF0WyxjKCJzdG9tYXRhbF9kZW5zaXR5IiwiUHJpbjFfdGVtcCIsIlByaW4yX2RyeSIsIlByaW4zX21hcCIsInllYXIiKV0Kc3VtbWFyeShkYXQpCmBgYApTdG9tYXRhbCBkZW5zaXR5IHdpbGwgYmUgb3VyIHJlc3BvbnNlIHZhcmlhYmxlIGluIHRoZSBhbmFseXNpcywgc28gdGhlcmUncyBubyByZWFzb24gdG8gcmV0YWluIGFueSByb3dzIHdoZXJlIHN0b21hdGFsIGRlbnNpdHkgaXMgPHR0Pk5BPC90dD4uIFllYXIgc2hvdWxkIGFsc28gYmUgdHJlYXRlZCBhcyBhIGZhY3RvciwgcmF0aGVyIHRoYW4gYXMgYSBudW1lcmljIHZhbHVlLgpgYGB7cn0KZGF0IDwtIHN1YnNldChkYXQsICFpcy5uYShzdG9tYXRhbF9kZW5zaXR5KSkKZGF0JHllYXIgPC0gZmFjdG9yKGRhdCR5ZWFyKQpzdW1tYXJ5KGRhdCkKYGBgCkNhcmxzb24gZXQgYWwuIHJlcG9ydGVkIGEgcG9zaXRpdmUgcmVsYXRpb25zaGlwIGJldHdlZW4gcHJpbmNpcGFsIGNvbXBvbmVudCBheGlzIDEgYW5kIHN0b21hdGFsIGRlbnNpdHkgYW5kIGEgbmVnYXRpdmUgcmVsYXRpb25zaGlwIGJldHdlZW4gYXhpcyAyIGFuZCBzdG9tYXRhbCBkZW5zaXR5LgpgYGB7cn0KbGlicmFyeShyc3RhbmFybSkKb3B0aW9ucyhtYy5jb3JlcyA9IHBhcmFsbGVsOjpkZXRlY3RDb3JlcygpKQoKZGF0X2xtIDwtIHN0YW5fbG1lcihzdG9tYXRhbF9kZW5zaXR5IH4gUHJpbjFfdGVtcCArIFByaW4yX2RyeSArIFByaW4zX21hcCArICgxfHllYXIpLAogICAgICAgICAgICAgICAgICAgIGRhdGE9ZGF0LAogICAgICAgICAgICAgICAgICAgIGFkYXB0X2RlbHRhPTAuOTk5KQpvcHRfb2xkIDwtIG9wdGlvbnMod2lkdGg9MTgwKQpzdW1tYXJ5KGRhdF9sbSwgZGlnaXRzPTMpCm9wdGlvbnMob3B0X29sZCkKYGBgClRoaXMgYW5hbHlzaXMgZGV0ZWN0cyB0aGUgc2FtZSByZWxhdGlvbnNoaXBzIENhcmxzb24gZXQgYWwuIHJlcG9ydGVkLCBidXQgaXQgYWxzbyBkZXRlY3RzIGEgcmVsYXRpb25zaGlwIHdpdGggYXhpcyAyIHRoYXQgdGhleSBkaWQgbm90IGRldGVjdC4gVGhlIGRpZmZlcmVuY2UgYXJpc2VzIGJlY2F1c2UgdGhlIENhcmxzb24gZXQgYWwuIG1vZGVsIHRyZWF0ZWQgc3RvbWF0YWwgZGVuc2l0eSBhcyBvbmUgY29tcG9uZW50IG9mIGEgdmVjdG9yIGluY2x1ZGluZyBvdGhlciB0cmFpdHMuIFByZXN1bWFibHkgdGhlIHJlbGF0aW9uc2hpcCBiZXR3ZWVuIHN0b21hdGFsIGRlbnNpdHkgYW5kIGF4aXMgMiBpcyBkZXRlY3RlZCBoZXJlIGJlY2F1c2Ugc3RvbWF0YWwgZGVuc2l0eSBpcyBuZWdhdGl2ZWx5IGFzc29jaWF0ZWQgd2l0aCBsZWFmIGFyZWEuIFRoZSBkaWZmZXJlbmNlIGluIHJlc3VsdHMgc3VnZ2VzdHMgdGhhdCB0aGUgYXNzb2NpYXRpb24gYmV0d2VlbiBheGlzIDIgYW5kIHN0b21hdGFsIGRlbnNpdHkgZGV0ZWN0ZWQgaGVyZSBpcyBub3QgY2F1c2FsLgo=</div>
