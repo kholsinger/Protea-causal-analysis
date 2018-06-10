@@ -1,0 +1,18 @@
+## R files to ignore
+##
+*.Rproj
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.Rsave
+*.Rproj.user
+
+## Stan files to ignore
+##
+*.rds
+
+## Miscellaneous files to ignore
+##
+*~
+

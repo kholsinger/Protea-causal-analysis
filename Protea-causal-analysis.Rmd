@@ -1,0 +1,36 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This notebook explores some of the data analyzed in Carlson et al., <em>Annals of Botany</em> 117:195-207; 2016 (doi: [https://dx.doi.org/10.1093/aob/mcv146]). Specifically, the focus here is on trait-environment relationships using data measured on seedlings in the Kirstenbosch Botanical Garden in 2013 and 2014. The data file here is the same one (or should be the same one) available at [https://github.com/kholsinger/Protea-repens-physiology/releases/tag/v1.0].
+```{r}
+## clear memory of any existing analyses to avoid conflicts
+##
+rm(list=ls())
+dat <- read.csv("traits-environment-pca.csv", header=TRUE, na.strings=c("NA","."))
+```
+This analysis will use only a subset of the data, so the first step is to reduce the data frame to include only the relevant columns.
+```{r}
+dat <- dat[,c("stomatal_density","Prin1_temp","Prin2_dry","Prin3_map","year")]
+summary(dat)
+```
+Stomatal density will be our response variable in the analysis, so there's no reason to retain any rows where stomatal density is <tt>NA</tt>. Year should also be treated as a factor, rather than as a numeric value.
+```{r}
+dat <- subset(dat, !is.na(stomatal_density))
+dat$year <- factor(dat$year)
+summary(dat)
+```
+Carlson et al. reported a positive relationship between principal component axis 1 and stomatal density and a negative relationship between axis 2 and stomatal density.
+```{r}
+library(rstanarm)
+options(mc.cores = parallel::detectCores())
+
+dat_lm <- stan_lmer(stomatal_density ~ Prin1_temp + Prin2_dry + Prin3_map + (1|year),
+                    data=dat,
+                    adapt_delta=0.999)
+opt_old <- options(width=180)
+summary(dat_lm, digits=3)
+options(opt_old)
+```
+This analysis detects the same relationships Carlson et al. reported, but it also detects a relationship with axis 2 that they did not detect. The difference arises because the Carlson et al. model treated stomatal density as one component of a vector including other traits. Presumably the relationship between stomatal density and axis 2 is detected here because stomatal density is negatively associated with leaf area. The difference in results suggests that the association between axis 2 and stomatal density detected here is not causal.
